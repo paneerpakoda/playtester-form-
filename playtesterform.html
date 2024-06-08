@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiranjeevi Playtest Evaluation Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+        }
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .checkbox-group label, .radio-group label {
+            margin-bottom: 5px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chiranjeevi Playtest Evaluation Form</h1>
+        <form action="submit_form.php" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <h2>Game Experience</h2>
+
+            <div class="form-group">
+                <label for="gameplay">How would you rate the overall gameplay experience?</label>
+                <select id="gameplay" name="gameplay">
+                    <option value="excellent">Excellent</option>
+                    <option value="good">Good</option>
+                    <option value="fair">Fair</option>
+                    <option value="poor">Poor</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="engagement">How engaging did you find the game?</label>
+                <select id="engagement" name="engagement">
+                    <option value="extremely_engaging">Extremely engaging</option>
+                    <option value="very_engaging">Very engaging</option>
+                    <option value="moderately_engaging">Moderately engaging</option>
+                    <option value="slightly_engaging">Slightly engaging</option>
+                    <option value="not_engaging">Not at all engaging</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="challenge">How challenging was the game?</label>
+                <select id="challenge" name="challenge">
+                    <option value="too_easy">Too easy</option>
+                    <option value="easy">Easy</option>
+                    <option value="just_right">Just right</option>
+                    <option value="hard">Hard</option>
+                    <option value="too_hard">Too hard</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="controls">How would you rate the game controls?</label>
+                <select id="controls" name="controls">
+                    <option value="excellent">Excellent</option>
+                    <option value="good">Good</option>
+                    <option value="fair">Fair</option>
+                    <option value="poor">Poor</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="bugs">Did you encounter any bugs or issues during gameplay?</label>
+                <select id="bugs" name="bugs">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="bug_description">If yes, please describe the bugs or issues:</label>
+                <textarea id="bug_description" name="bug_description"></textarea>
+            </div>
+
+            <h2>Graphics and Sound</h2>
+
+            <div class="form-group">
+                <label for="graphics">How would you rate the game graphics?</label>
+                <select id="graphics" name="graphics">
+                    <option value="excellent">Excellent</option>
+                    <option value="good">Good</option>
+                    <option value="fair">Fair</option>
+                    <option value="poor">Poor</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="sound">How would you rate the game sound and music?</label>
+                <select id="sound" name="sound">
+                    <option value="excellent">Excellent</option>
+                    <option value="good">Good</option>
+                    <option value="fair">Fair</option>
+                    <option value="poor">Poor</option>
+                </select>
+            </div>
+
+            <h2>Story and Characters</h2>
+
+            <div class="form-group">
+                <label for="story">How engaging was the game story?</label>
+                <select id="story" name="story">
+                    <option value="extremely_engaging">Extremely engaging</option>
+                    <option value="very_engaging">Very engaging</option>
+                    <option value="moderately_engaging">Moderately engaging</option>
+                    <option value="slightly_engaging">Slightly engaging</option>
+                    <option value="not_engaging">Not at all engaging</option>
+                    <option value="not_applicable">Not applicable</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="characters">How well-developed were the characters?</label>
+                <select id="characters" name="characters">
+                    <option value="extremely_developed">Extremely well-developed</option>
+                    <option value="very_developed">Very well-developed</option>
+                    <option value="moderately_developed">Moderately well-developed</option>
+                    <option value="slightly_developed">Slightly well-developed</option>
+                    <option value="not_developed">Not at all well-developed</option>
+                    <option value="not_applicable">Not applicable</option>
+                </select>
+            </div>
+
+            <h2>Specific Game Elements</h2>
+
+            <div class="form-group">
+                <label for="monsters">How would you rate the experience of fighting monsters in the mayagoha?</label>
+                <select id="monsters" name="monsters">
+                    <option value="excellent">Excellent</option>
+                    <option value="good">Good</option>
+                    <option value="fair">Fair</option>
+                    <option value="poor">Poor</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="asura">How would you rate the difficulty of reaching and fighting the asura?</label>
+                <select id="asura" name="asura">
+                    <option value="too_easy">Too easy</option>
+                    <option value="easy">Easy</option>
+                    <option value="just_right">Just right</option>
+                    <option value="hard">Hard</option>
+                    <option value="too_hard">Too hard</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="blessings">Did you find the blessings from gods useful?</label>
+                <select id="blessings" name="blessings">
+                    <option value="extremely_useful">Extremely useful</option>
+                    <option value="very_useful">Very useful</option>
+                    <option value="moderately_useful">Moderately useful</option>
+                    <option value="slightly_useful">Slightly useful</option>
+                    <option value="not_useful">Not at all useful</option>
+                </select>
+            </div>
+
+            <h2>Overall Feedback</h2>
+
+            <div class="form-group">
+                <label for="likes">What did you like the most about the game?</label>
+                <textarea id="likes" name="likes"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="dislikes">What did you like the least about the game?</label>
+                <textarea id="dislikes" name="dislikes"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="suggestions">Do you have any suggestions for improvement?</label>
+                <textarea id="suggestions" name="suggestions"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="recommend">Would you recommend this game to others?</label>
+                <select id="recommend" name="recommend">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="maybe">Maybe</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Any additional comments or feedback?</label>
+                <textarea id="comments" name="comments"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
